@@ -1,12 +1,10 @@
 # Hi, I'm Bhavya Patela
 
-<<<<<<< HEAD
 Data Analyst Intern
 <br> 
 =======
 Data Analyst Intern 
 <br>
->>>>>>> 1574a554c411c75239baf3e921fe46e48f50f792
 📍 India  
 
 Welcome to my personal portfolio website!  
