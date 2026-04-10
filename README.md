@@ -1,6 +1,7 @@
-# 👋 Hi, I'm Bhavya Patela
+# Hi, I'm Bhavya Patela
 
-🚀 Data Analyst Intern 
+Data Analyst Intern
+<br> 
 📍 India  
 
 Welcome to my personal portfolio website!  
