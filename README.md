@@ -56,6 +56,8 @@ My goal is to become a **data professional who can solve real-world problems usi
 - Use the AI assistant to quickly locate specific topics in long lecture videos
 - Clean UI and responsive design
 
+🔗 https://github.com/bhavyapatela/Rag-based-ai
+
 ---
 
 ## 📈 What I’m Learning
