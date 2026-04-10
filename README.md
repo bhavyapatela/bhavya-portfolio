@@ -1,8 +1,5 @@
 # Hi, I'm Bhavya Patela
 
-Data Analyst Intern
-<br> 
-=======
 Data Analyst Intern 
 <br>
 📍 India  
