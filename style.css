@@ -887,6 +887,92 @@ textarea {
   }
 
 }
+
+/* 📱 MOBILE RESPONSIVENESS FIX */
+@media (max-width: 768px) {
+
+  /* General spacing */
+  body {
+    padding: 0 16px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  /* HERO SECTION */
+  .hero-title {
+    font-size: 36px !important;
+    line-height: 1.1;
+  }
+
+  .hero-subtext {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-bottom {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  /* Buttons */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+
+  /* Skills pills */
+  .hero-tags {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .project-card {
+    height: auto;
+  }
+
+  /* EXPERIENCE SECTION */
+  .experience-row {
+    grid-template-columns: 1fr !important;
+    gap: 8px;
+  }
+
+  .experience-title {
+    font-size: 16px;
+  }
+
+  .experience-desc {
+    font-size: 13px;
+  }
+
+  /* CONTACT */
+  .contact-container {
+    padding: 20px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+}
 /* 
 @media (max-width: 780px) {
   .section {
