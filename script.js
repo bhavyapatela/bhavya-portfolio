@@ -2,36 +2,7 @@ const cursorGlow = document.getElementById("cursorGlow");
 const contactForm = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
 
-function scrambleText(element, finalText, duration = 1800) {
-  const chars = "ABCDEFGHIJKLMNOPQRS@#$%";
-  let start = null;
 
-  function step(timestamp) {
-    if (!start) start = timestamp;
-    const progress = Math.min((timestamp - start) / duration, 4);
-    const revealedCount = Math.floor(progress * finalText.length);
-
-    element.textContent = finalText
-      .split("")
-      .map((char, i) => {
-        if (char === " ") return " ";
-        if (i < revealedCount) return char;
-        return chars[Math.floor(Math.random() * chars.length)];
-      })
-      .join("");
-
-    if (progress < 1) requestAnimationFrame(step);
-    else element.textContent = finalText;
-  }
-
-  requestAnimationFrame(step);
-}
-
-const heroTitle = document.querySelector(".hero-title h1");
-if (heroTitle) {
-  const original = heroTitle.textContent.trim();
-  scrambleText(heroTitle, original);
-}
 
 window.addEventListener("mousemove", (e) => {
   if (!cursorGlow) return;
@@ -94,4 +65,3 @@ if (contactForm) {
     contactForm.reset();
   });
 }
-
