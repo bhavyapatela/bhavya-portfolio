@@ -1013,3 +1013,15 @@ img {
     padding: 18px;
   }
 }
+
+@media (max-width: 768px) {
+  .marquee-content {
+    gap: 52px;
+  }
+
+  .tech-logo {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+  }
+}
