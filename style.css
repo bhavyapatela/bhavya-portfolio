@@ -450,7 +450,7 @@ img {
   line-height: 1.55;
 }
 
-/* marquee */
+/* ── MARQUEE ── */
 .marquee-section {
   width: 100%;
   overflow: hidden;
@@ -500,6 +500,7 @@ img {
   align-items: center;
   gap: 100px;
   flex: 0 0 auto;
+  margin-right: 100px;
 }
 
 .tech-logo {
