@@ -73,7 +73,7 @@ My goal is to become a **data professional who can solve real-world problems usi
 
 📧 Email: bhavyaatwork2026@gmail.com  
 💼 GitHub: https://github.com/bhavyapatela  
-🔗 LinkedIn: -
+🔗 LinkedIn: www.linkedin.com/in/bhavyapatela
 
 ---
 
