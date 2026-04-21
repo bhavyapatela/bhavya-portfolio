@@ -4,21 +4,27 @@ const formNote = document.getElementById("formNote");
 
 
 
-window.addEventListener("mousemove", (e) => {
-  if (!cursorGlow) return;
+// Only run cursor glow if the device has a mouse/fine pointer
+if (window.matchMedia("(pointer: fine)").matches) {
+  window.addEventListener("mousemove", (e) => {
+    if (!cursorGlow) return;
 
-  cursorGlow.animate(
-    {
-      left: `${e.clientX}px`,
-      top: `${e.clientY}px`
-    },
-    {
-      duration: 700,
-      fill: "forwards",
-      easing: "ease-out"
-    }
-  );
-});
+    cursorGlow.animate(
+      {
+        left: `${e.clientX}px`,
+        top: `${e.clientY}px`
+      },
+      {
+        duration: 700,
+        fill: "forwards",
+        easing: "ease-out"
+      }
+    );
+  });
+} else if (cursorGlow) {
+  // Hide glow on touch devices
+  cursorGlow.style.display = "none";
+}
 
 const observer = new IntersectionObserver(
   (entries) => {
