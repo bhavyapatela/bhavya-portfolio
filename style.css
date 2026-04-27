@@ -49,12 +49,15 @@ body.light-theme {
   0% {
     background-position: 0% 0%;
   }
+
   33% {
     background-position: 100% 50%;
   }
+
   66% {
     background-position: 50% 100%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -636,6 +639,7 @@ body.light-theme .hero-tags span:hover {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -784,10 +788,12 @@ body.light-theme .hero-tags span:hover {
 }
 
 @keyframes blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -1130,4 +1136,3 @@ body.light-theme .hero-tags span:hover {
     padding: 20px;
   }
 }
-
