@@ -269,6 +269,20 @@ body.light-theme .cursor-glow {
   background: var(--pill);
   color: var(--muted);
   font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.hero-tags span:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .hero-tags span:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .hero-intro {
