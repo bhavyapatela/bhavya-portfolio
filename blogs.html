@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhavya Patela | Blogs & Insights</title>
+  <meta name="description"
+    content="Blogs and Insights by Bhavya Patela - Covering Data Analysis, AI, BigQuery, and personal interests like Anime, K-pop, and Japan." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="blogs-page">
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-nav-pills reveal show">
+        <div class="nav-links">
+          <a href="index.html#hero">Home</a>
+          <a href="index.html#about">Info</a>
+          <a href="index.html#projects">Works</a>
+          <a href="blogs.html" class="active">Blogs</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg id="themeIcon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="hero-title reveal show">
+        <h1>Blogs & Insights</h1>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-intro reveal show" style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <p>
+            I break down data, AI, and real-world problems into simple insights — and also share things I’m passionate about beyond tech.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blogs-section">
+      <div class="blog-filters reveal show">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai-data">AI / Data</button>
+        <button class="filter-btn" data-filter="projects">Projects</button>
+        <button class="filter-btn" data-filter="debugging">Debugging</button>
+        <button class="filter-btn" data-filter="interests">Interests</button>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+        <!-- Professional Blogs -->
+        <article class="blog-card reveal show" data-category="projects">
+          <div class="blog-content">
+            <span class="blog-tag">Project</span>
+            <span class="blog-date">May 2026</span>
+            <h3>Building a Real-Time AQI Prediction System</h3>
+            <p>Using APIs, ML models, and FastAPI to predict air quality in real time.</p>
+            <button class="read-more-btn" onclick="openModal('Building a Real-Time AQI Prediction System')">Read More &rarr;</button>
+          </div>
+        </article>
+
+        <article class="blog-card reveal show" data-category="ai-data">
+          <div class="blog-content">
+            <span class="blog-tag">AI / Data</span>
+            <span class="blog-date">Apr 2026</span>
+            <h3>How BigQuery + AI Turns Questions into Insights</h3>
+            <p>Understanding how natural language becomes SQL and meaningful analytics.</p>
+            <button class="read-more-btn" onclick="openModal('How BigQuery + AI Turns Questions into Insights')">Read More &rarr;</button>
+          </div>
+        </article>
+
+        <article class="blog-card reveal show" data-category="debugging">
+          <div class="blog-content">
+            <span class="blog-tag">Debugging</span>
+            <span class="blog-date">Mar 2026</span>
+            <h3>Fixing Common Developer Errors (Git, Uvicorn, APIs)</h3>
+            <p>Real debugging problems I faced and how I solved them.</p>
+            <button class="read-more-btn" onclick="openModal('Fixing Common Developer Errors (Git, Uvicorn, APIs)')">Read More &rarr;</button>
+          </div>
+        </article>
+
+        <!-- Personal Interest Blogs -->
+        <article class="blog-card reveal show" data-category="interests">
+          <div class="blog-content">
+            <span class="blog-tag">Interests</span>
+            <span class="blog-date">Feb 2026</span>
+            <h3>Why Anime Storytelling is So Powerful</h3>
+            <p>Exploring emotional depth and storytelling techniques in anime.</p>
+            <button class="read-more-btn" onclick="openModal('Why Anime Storytelling is So Powerful')">Read More &rarr;</button>
+          </div>
+        </article>
+
+        <article class="blog-card reveal show" data-category="interests">
+          <div class="blog-content">
+            <span class="blog-tag">Interests</span>
+            <span class="blog-date">Jan 2026</span>
+            <h3>K-pop Global Growth: A Perspective</h3>
+            <p>How K-pop became a worldwide phenomenon.</p>
+            <button class="read-more-btn" onclick="openModal('K-pop Global Growth: A Perspective')">Read More &rarr;</button>
+          </div>
+        </article>
+
+        <article class="blog-card reveal show" data-category="interests">
+          <div class="blog-content">
+            <span class="blog-tag">Interests</span>
+            <span class="blog-date">Dec 2025</span>
+            <h3>Japan’s Culture & Technology Blend</h3>
+            <p>A look at how Japan mixes tradition with modern innovation.</p>
+            <button class="read-more-btn" onclick="openModal('Japan’s Culture & Technology Blend')">Read More &rarr;</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>BHAVYA PATELA</p>
+    <div>
+      <a href="index.html#hero">Home</a>
+      <a href="index.html#about">Info</a>
+      <a href="index.html#projects">Works</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Blog Modal Placeholder -->
+  <div class="blog-modal" id="blogModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <div class="modal-body">
+        <h2 id="modalTitle">Blog Title</h2>
+        <div class="modal-meta">
+            <span id="modalDate">May 2026</span> &bull; <span id="modalCategory">Category</span>
+        </div>
+        <div class="modal-text">
+            <p>This is a placeholder for the full blog content. In a complete application, this would contain the full article detailing the topic, complete with code snippets, images, and deeper insights.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="blogs.js"></script>
+</body>
+
+</html>
