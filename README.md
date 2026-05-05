@@ -46,7 +46,8 @@ My goal is to become a **data professional who can solve real-world problems usi
 - Real-time analysis of:
   - Weather  
   - Traffic  
-  - Pollution  
+  - Pollution
+  - Leaflet / OpenStreetMap 
 - Includes AI chatbot integration  
 
 🔗 https://github.com/bhavyapatela/Urban-Intelligence-System  
