@@ -356,6 +356,35 @@ body.light-theme .hero-tags span:hover {
   font-weight: 800;
 }
 
+/* BLOGS PAGE FIX */
+.blogs-page .hero.section {
+  min-height: auto;
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.blogs-page .hero-title {
+  margin-top: 20px;
+}
+
+.blogs-page .hero-title h1 {
+  line-height: 0.9;
+  margin-bottom: 0;
+}
+
+.blogs-page .hero-bottom {
+  margin-top: 0;
+}
+
+.blogs-page .hero-intro p {
+  margin-top: 0;
+}
+
 /* projects */
 .projects-grid {
   display: grid;
@@ -1135,7 +1164,7 @@ body.light-theme .hero-tags span:hover {
   .contact-box {
     padding: 20px;
   }
-  }
+}
 }
 
 /* ==========================================================================
@@ -1482,7 +1511,8 @@ body.light-theme .blog-card:hover {
   .modal-body {
     padding: 32px 24px;
   }
+
   .modal-body h2 {
     font-size: 1.8rem;
   }
-}
+}
