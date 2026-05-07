@@ -382,9 +382,8 @@ body.light-theme .hero-tags span:hover {
   margin-top: -10px;
 }
 
-display: flex;
-
-  {
+.blogs-grid {
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 24px;
@@ -1187,7 +1186,7 @@ display: flex;
     padding: 20px;
   }
 }
-}
+
 
 /* ==========================================================================
    BLOGS & INSIGHTS PAGE STYLES
