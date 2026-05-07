@@ -20,6 +20,7 @@ body.light-theme {
   --pill: rgba(0, 0, 0, 0.025);
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -359,10 +360,31 @@ body.light-theme .hero-tags span:hover {
 /* BLOGS PAGE FIX */
 .blogs-page .hero.section {
   min-height: auto;
-  padding-top: 120px;
+
+  padding-top: 40px;
   padding-bottom: 60px;
 
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.blogs-page .hero-nav-pills {
+  margin-top: 0;
+}
+
+.blogs-page .hero-title {
+  margin-top: -10px;
+}
+
+.blogs-page .hero-bottom {
+  margin-top: -10px;
+}
+
+display: flex;
+
+  {
   flex-direction: column;
   justify-content: flex-start;
   gap: 24px;
