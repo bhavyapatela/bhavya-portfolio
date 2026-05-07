@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             blogCards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
-                
+
                 if (filterValue === 'all' || filterValue === cardCategory) {
                     card.style.display = 'block';
                     // Trigger reflow for animation if needed
@@ -74,3 +74,8 @@ function closeModal() {
         document.body.style.overflow = ''; // Restore scrolling
     }
 }
+
+blogs.forEach(blog => {
+    // render cards dynamically
+});
+
