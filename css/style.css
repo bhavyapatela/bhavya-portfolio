@@ -1537,3 +1537,168 @@ body.light-theme .blog-card:hover {
     font-size: 1.8rem;
   }
 }
+
+/* New Blog Notification */
+.blog-notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 320px;
+  background: rgba(13, 13, 13, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 16px 20px;
+  z-index: 9999;
+  cursor: pointer;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 
+              0 0 20px rgba(0, 102, 255, 0.1);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.blog-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.blog-notification:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), 
+              0 0 30px rgba(255, 0, 0, 0.15);
+}
+
+.notif-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.notif-badge {
+  background: #ff0000;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+.notif-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.notif-close:hover {
+  color: #fff;
+}
+
+.notif-content h4 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #fff;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.notif-content p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 4px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.notif-content p svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.blog-notification:hover .notif-content p svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .blog-notification {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    width: auto;
+  }
+}
+
+body.light-theme .blog-notification {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 102, 255, 0.05);
+}
+
+body.light-theme .notif-content h4 {
+  color: var(--text);
+}
+
+body.light-theme .notif-close:hover {
+  color: var(--text);
+}
+
+/* Featured Blog Card with Background */
+.anime-featured {
+  background-image: linear-gradient(to right, rgba(10, 10, 10, 0.95) 30%, rgba(10, 10, 10, 0.6) 100%), 
+                    url('../Images/l_sitting_darkness_1778497549640.png') !important;
+  background-size: cover !important;
+  background-position: center 20% !important;
+  border: 1px solid rgba(255, 0, 0, 0.2) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+body.light-theme .anime-featured {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.6) 100%), 
+                    url('../Images/l_sitting_darkness_1778497549640.png') !important;
+}
+
+.anime-featured::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 40px rgba(255, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+.anime-featured:hover {
+  border-color: rgba(255, 0, 0, 0.5) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.15) !important;
+}
+
+.anime-featured .blog-tag {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ff4d4d;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.anime-featured h3 {
+  color: var(--dn-text);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.light-theme .anime-featured h3 {
+  text-shadow: none;
+}

@@ -104,3 +104,67 @@ if (themeToggle) {
     setTheme(isLight ? "dark" : "light");
   });
 }
+
+// Blog Notification Logic (Home Page Only)
+function initBlogNotification() {
+  const isHomePage = window.location.pathname === "/" || window.location.pathname.endsWith("index.html");
+  if (!isHomePage) return;
+
+  const isDismissed = localStorage.getItem('blogNotificationDismissed');
+  if (isDismissed) return;
+
+  setTimeout(() => {
+    const notif = document.createElement('div');
+    notif.className = 'blog-notification';
+    notif.innerHTML = `
+      <button class="notif-close" id="notifClose" aria-label="Dismiss">&times;</button>
+      <div class="notif-header">
+        <span class="notif-badge">NEW</span>
+      </div>
+      <div class="notif-content">
+        <h4>Why L Had To Die — The Tragedy of Ryuzaki</h4>
+        <p>New anime storytelling article added 
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </p>
+      </div>
+    `;
+
+    document.body.appendChild(notif);
+
+    // Show after injection
+    setTimeout(() => notif.classList.add('show'), 100);
+
+    const dismissNotif = () => {
+      notif.classList.remove('show');
+      localStorage.setItem('blogNotificationDismissed', 'true');
+      setTimeout(() => notif.remove(), 600);
+    };
+
+    // Click to navigate
+    notif.addEventListener('click', (e) => {
+      if (e.target.id === 'notifClose') {
+        e.stopPropagation();
+        dismissNotif();
+        return;
+      }
+      
+      // Navigate to blog
+      if (typeof triggerTransition === 'function') {
+        triggerTransition('pages/why-l-had-to-die.html');
+      } else {
+        window.location.href = 'pages/why-l-had-to-die.html';
+      }
+    });
+
+    // Auto-hide after 8 seconds
+    setTimeout(() => {
+      if (notif.parentElement) {
+        notif.classList.remove('show');
+        setTimeout(() => notif.remove(), 600);
+      }
+    }, 8000);
+
+  }, 2000); // Show after 2 seconds
+}
+
+document.addEventListener('DOMContentLoaded', initBlogNotification);
