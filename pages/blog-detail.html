@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Detail | Bhavya Patela</title>
+  <meta name="description" content="Read the latest insights and stories by Bhavya Patela." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css" />
+  
+  <!-- Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body class="blog-detail-page">
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <main>
+    <section class="section">
+      <div class="hero-nav-pills reveal show">
+        <div class="nav-links">
+          <a href="../index.html#hero">Home</a>
+          <a href="../index.html#about">Info</a>
+          <a href="../index.html#projects">Works</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg id="themeIcon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div id="blogDetailContent" class="blog-detail-container">
+        <!-- Content will be loaded by blog-loader.js -->
+        <div class="loader">Loading blog...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>BHAVYA PATELA</p>
+    <div>
+      <a href="../index.html#hero">Home</a>
+      <a href="../index.html#about">Info</a>
+      <a href="../index.html#projects">Works</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/blog-loader.js"></script>
+</body>
+
+</html>

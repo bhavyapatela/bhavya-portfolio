@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Filtering Logic ---
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const blogCards = document.querySelectorAll('.blog-card');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -11,8 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
 
             const filterValue = btn.getAttribute('data-filter');
+            const currentBlogCards = document.querySelectorAll('.blog-card');
 
-            blogCards.forEach(card => {
+            currentBlogCards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
 
                 if (filterValue === 'all' || filterValue === cardCategory) {
