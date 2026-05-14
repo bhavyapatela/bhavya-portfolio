@@ -156,10 +156,10 @@ function showNewBlogNotification() {
             <button class="toast-close" id="closeToast">&times;</button>
         </div>
         <div class="toast-body">
-            <h4 class="toast-title">Why L Had To Die - The Tragedy of Ryuzaki</h4>
+            <h4 class="toast-title">Building Urban Intelligence System — A Smart City AI Platform</h4>
         </div>
         <div class="toast-actions">
-            <a href="${detailPath}" class="toast-btn">Read Now &rarr;</a>
+            <a href="pages/urban-intelligence-system.html" class="toast-btn">Read Now &rarr;</a>
         </div>
     `;
 
