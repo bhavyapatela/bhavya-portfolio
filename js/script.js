@@ -147,7 +147,7 @@ function initBlogNotification() {
         dismissNotif();
         return;
       }
-      
+
       // Navigate to blog
       if (typeof triggerTransition === 'function') {
         triggerTransition('pages/why-l-had-to-die.html');

@@ -22,3 +22,8 @@ This file tracks small daily/weekly progress updates for this project.
 - Improved blog page layout.
 - Checked spacing issue on blog cards.
 - Worked on page transition/loading animation.
+
+## 2026-05-11
+
+### Blog Added
+- Added first blog post "Why L Had To Die - The Tragedy of Ryuzaki" to the blog section.
